@@ -10,14 +10,21 @@ function login($user, $password){
   $query = "SELECT * FROM usuario WHERE id = $user";
   $result = mysqli_query($db, $query);
   if ($result && mysqli_num_rows($result) == 1) {
-
+    $row = mysqli_fetch_assoc($result);
+    if (password_verify($password, $row['password'])) {
+      $return = true;
+    }else{
+        header("location:login.php?error=1");
+    }
   }else{
     header("location:login.php?error=1");
   }
   mysqli_close($db);
+
+  return $return;
 }
 
-public function createUser($db, $user, $password, $name, $email){
+function createUser($db, $user, $password, $name, $email){
   $db = mysqli_connect(SERVER_DB, USER_DB, PASS_DB, NAME_DB);
   $query = "SELECT * FROM usuario WHERE id = $user";
   $resulto = mysqli_query($db, $query);
@@ -30,10 +37,14 @@ public function createUser($db, $user, $password, $name, $email){
                 VALUES($user, $passhash, $name, $email)";
     $hashpass = password_hash($password, PASSWORD_DEFAULT);
     $ok = mysqli_query($db, $insert);
-    return true;
+    if ($ok) {
+      $return = true;
+    }else{
+      header("location:create.php?error=1");
+    }
   }
   mysqli_close($db);
+  return $return;
 }
-
 
 ?>

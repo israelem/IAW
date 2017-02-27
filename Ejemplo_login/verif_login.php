@@ -6,6 +6,7 @@
   </head>
   <body>
     <?php
+    require_once("bd.php");
       $password = "hola";
       $hash = password_hash($password, PASSWORD_DEFAULT);
       if (password_verify($password, $hash)) {
