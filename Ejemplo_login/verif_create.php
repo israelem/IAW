@@ -5,17 +5,17 @@
       isset($_POST['name']) &&
       isset($_POST['email']) &&
       isset($_POST['email2']) ) {
-        if (!checkUserId($_POST['user'])) {
+        if (checkUserId($_POST['user']) == -1) {
           //Error 2, el nombre de usuario ya existe
           header("location:create.php?error=2");
-        }else if(!checkEmail($_POST['email'])){
+        }elseif(checkEmail($_POST['email']) == -1){
           //Error 3, correo electrónico ya está registrado
           header("location:create.php?error=3");
-        }else if(checkEmail($_POST['email']) != checkEmail($_POST['email2'])){
+        }elseif(checkEmail($_POST['email']) != checkEmail($_POST['email2'])){
           //Error 4, los correos no coinciden
           header("location:create.php?error=4");
-        }else if (!createUser($_POST['user'], $_POST['password'], $_POST['name'],
-                             $_POST['email'])) {
+        }elseif (createUser($_POST['user'], $_POST['password'], $_POST['name'],
+                             $_POST['email']) == -1) {
           //Error 5, Error en la creación del usuario, inténtelo más tarde
           header("location:create.php?error=5");
         }else{

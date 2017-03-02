@@ -9,6 +9,7 @@ define('NAME_DB', 'test');
 function login($user, $password){
   $db = mysqli_connect(SERVER_DB, USER_DB, PASS_DB, NAME_DB);
   $query = "SELECT * FROM usuario WHERE id = $user";
+  $query = mysqli_real_escape_string($db, $query);
   $result = mysqli_query($db, $query);
   if ($result && mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_assoc($result);
@@ -30,10 +31,10 @@ function login($user, $password){
 
 function createUser($user, $password, $name, $email){
   $db = mysqli_connect(SERVER_DB, USER_DB, PASS_DB, NAME_DB);
-  $result = mysqli_query($db, $query);
-  $insert = "INSERT INTO usuarios(id, password, nombre, correo)
-  VALUES($user, $passhash, $name, $email)";
   $hashpass = password_hash($password, PASSWORD_DEFAULT);
+  $insert = "INSERT INTO `usuarios` (`id`, `password`, `nombre`, `correo`)" .
+            " VALUES($user, $hashpass, $name, $email)";
+  $insert = mysqli_real_escape_string($db, $insert);
   $ok = mysqli_query($db, $insert);
   if ($ok) {
     $return = 0;
@@ -49,33 +50,35 @@ function createUser($user, $password, $name, $email){
 function checkUserId($user){
   $db = mysqli_connect(SERVER_DB, USER_DB, PASS_DB, NAME_DB);
   $query = "SELECT * FROM usuarios WHERE id = $user";
+  $query = mysqli_real_escape_string($db, $query);
   $result = mysqli_query($db, $query);
   if($result && mysqli_num_rows($result) == 1){
     //El usuario ya existe
-    $result = -1;
+    $return = -1;
   }else{
     //El usuario no existe, todo correcto
-    $result = 0;
+    $return = 0;
   }
   mysqli_close($db);
 
-  return $result;
+  return $return;
 }
 
 function checkEmail($email){
   $db = mysqli_connect(SERVER_DB, USER_DB, PASS_DB, NAME_DB);
   $query = "SELECT * FROM usuarios WHERE correo = $email";
+  $query = mysqli_real_escape_string($query);
   $result = mysqli_query($db, $query);
   if($result && mysqli_num_rows($result) == 1){
     //El correo ya está registrado
-    $result = -1;
+    $return = -1;
   }else{
     //El usuario no existe, todo correcto
-    $result = 0;
+    $return = 0;
   }
   mysqli_close($db);
 
-  return $result;
+  return $return;
 }
 
 ?>

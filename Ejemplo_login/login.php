@@ -6,8 +6,18 @@
   </head>
   <body>
     <?php
-      if (isset($_GET['error']) && $_GET['error']==1) {
-        echo "<h1>Nombre de usuario o contraseña no válido</h1>";
+      if (isset($_GET['error'])){
+        switch ($_GET['error']) {
+          case 0:
+
+            break;
+          case 1:
+
+            break;
+          case 2:
+
+            break;
+        }
       }
     ?>
     <p>Introduzca nombre de usuario y contraseña</p>

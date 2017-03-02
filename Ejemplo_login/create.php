@@ -26,12 +26,14 @@
         }
       }
     ?>
-    <form action="verif_create.html" method="post">
+    <form action="verif_create.php" method="post">
       <p>ID usuario: <input type="text" name="user"></p>
       <p>Contraseña: <input type="password" name="password"></p>
       <p>Nombre: <input type="text" name="name"></p>
       <p>Correo electrónico: <input type="text" name="email"></p>
       <p>Repita correo: <input type="text" name="email2"></p>
+      <p><input type="submit" name="crear" value="Crear usuario">
+          <input type="reset" name="borrar" value="Borrar datos"></p>
     </form>
   </body>
 </html>
