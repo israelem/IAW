@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,6 +5,27 @@
     <title>Crear usuario</title>
   </head>
   <body>
+    <?php
+      if (isset($_GET['error'])) {
+        switch ($_GET['error']) {
+          case 0:
+            # code...
+            break;
+          case 1:
+            # code...
+            break;
+          case 2:
+            # code...
+            break;
+          case 3:
+            # code...
+            break;
+          case 4:
+            # code...
+            break;
+        }
+      }
+    ?>
     <form action="verif_create.html" method="post">
       <p>ID usuario: <input type="text" name="user"></p>
       <p>Contraseña: <input type="password" name="password"></p>
@@ -15,20 +35,3 @@
     </form>
   </body>
 </html>
-=======
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Crear usuario</title>
-  </head>
-  <body>
-    <form action="verif_create.html" method="post">
-      <p>ID usuario: <input type="text" name="user" value=""></p>
-      <p>Contraseña: <input type="password" name="password" value=""></p>
-      <p>Nombre: <input type="text" name="name" value=""></p>
-      <p>Nombre: <input type="text" name="name" value=""></p>
-    </form>
-  </body>
-</html>
->>>>>>> origin/master
