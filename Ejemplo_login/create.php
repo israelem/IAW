@@ -6,10 +6,11 @@
   </head>
   <body>
     <form action="verif_create.html" method="post">
-      <p>ID usuario: <input type="text" name="user" value=""></p>
-      <p>Contraseña: <input type="password" name="password" value=""></p>
-      <p>Nombre: <input type="text" name="name" value=""></p>
-      <p>Nombre: <input type="text" name="name" value=""></p>
+      <p>ID usuario: <input type="text" name="user"></p>
+      <p>Contraseña: <input type="password" name="password"></p>
+      <p>Nombre: <input type="text" name="name"></p>
+      <p>Correo electrónico: <input type="text" name="email"></p>
+      <p>Repita correo: <input type="text" name="email2"></p>
     </form>
   </body>
 </html>

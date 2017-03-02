@@ -3,7 +3,7 @@
 define('SERVER_DB', '127.0.0.1');
 define('USER_DB', 'root');
 define('PASS_DB', '');
-define('NAME_DB', 'test')
+define('NAME_DB', 'test');
 
 function login($user, $password){
   $db = mysqli_connect(SERVER_DB, USER_DB, PASS_DB, NAME_DB);
@@ -24,7 +24,7 @@ function login($user, $password){
   return $return;
 }
 
-function createUser($db, $user, $password, $name, $email){
+function createUser($user, $password, $name, $email){
   $db = mysqli_connect(SERVER_DB, USER_DB, PASS_DB, NAME_DB);
   $query = "SELECT * FROM usuario WHERE id = $user";
   $resulto = mysqli_query($db, $query);
@@ -45,6 +45,11 @@ function createUser($db, $user, $password, $name, $email){
   }
   mysqli_close($db);
   return $return;
+}
+
+function checkUserId()
+{
+  # code...
 }
 
 ?>
