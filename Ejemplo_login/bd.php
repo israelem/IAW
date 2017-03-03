@@ -8,8 +8,9 @@ define('NAME_DB', 'test');
 
 function login($user, $password){
   $db = mysqli_connect(SERVER_DB, USER_DB, PASS_DB, NAME_DB);
-  $query = "SELECT * FROM usuario WHERE id = $user";
-  $query = mysqli_real_escape_string($db, $query);
+  $user = "'" . $user . "'";
+  $query = "SELECT * FROM usuario WHERE id = = $user";
+  //$query = mysqli_real_escape_string($db, $query);
   $result = mysqli_query($db, $query);
   if ($result && mysqli_num_rows($result) == 1) {
     $row = mysqli_fetch_assoc($result);
@@ -31,10 +32,13 @@ function login($user, $password){
 
 function createUser($user, $password, $name, $email){
   $db = mysqli_connect(SERVER_DB, USER_DB, PASS_DB, NAME_DB);
-  $hashpass = password_hash($password, PASSWORD_DEFAULT);
-  $insert = "INSERT INTO `usuarios` (`id`, `password`, `nombre`, `correo`)" .
+  $user = "'" . $user . "'";
+  $hashpass = "'" . password_hash($password, PASSWORD_DEFAULT) . "'";
+  $name = "'" . $name . "'";
+  $email = "'" . $email . "'";
+  $insert = "INSERT INTO usuarios (id, password, nombre, correo)" .
             " VALUES($user, $hashpass, $name, $email)";
-  $insert = mysqli_real_escape_string($db, $insert);
+  //$insert = mysqli_real_escape_string($db, $insert);
   $ok = mysqli_query($db, $insert);
   if ($ok) {
     $return = 0;
@@ -49,8 +53,9 @@ function createUser($user, $password, $name, $email){
 
 function checkUserId($user){
   $db = mysqli_connect(SERVER_DB, USER_DB, PASS_DB, NAME_DB);
+  $user = "'" . $user . "'";
   $query = "SELECT * FROM usuarios WHERE id = $user";
-  $query = mysqli_real_escape_string($db, $query);
+  //$query = mysqli_real_escape_string($db, $query);
   $result = mysqli_query($db, $query);
   if($result && mysqli_num_rows($result) == 1){
     //El usuario ya existe
@@ -66,8 +71,9 @@ function checkUserId($user){
 
 function checkEmail($email){
   $db = mysqli_connect(SERVER_DB, USER_DB, PASS_DB, NAME_DB);
+  $email = "'" . $email . "'";
   $query = "SELECT * FROM usuarios WHERE correo = $email";
-  $query = mysqli_real_escape_string($query);
+  //$query = mysqli_real_escape_string($db, $query);
   $result = mysqli_query($db, $query);
   if($result && mysqli_num_rows($result) == 1){
     //El correo ya está registrado
