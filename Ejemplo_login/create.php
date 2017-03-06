@@ -9,22 +9,22 @@
       if (isset($_GET['error'])) {
         switch ($_GET['error']) {
           case 0:
-            # code...
+            echo "<h2>Usuario creado correctamente</h2>";
             break;
           case 1:
-            # code...
+            echo "<h2>Rellene todos los campos</h2>";
             break;
           case 2:
-            # code...
+            echo "<h2>El nombre de usuario ya existe</h2>";
             break;
           case 3:
-            # code...
+            echo "<h2>El correo electrónico ya está registrado</h2>";
             break;
           case 4:
-            # code...
+            echo "<h2>Los correos no coinciden</h2>";
             break;
           case 5:
-            # code...
+            echo "<h2>Error al crear el usuario, inténtelo de nuevo</h2>";
             break;
         }
       }

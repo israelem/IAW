@@ -9,19 +9,19 @@
       if (isset($_GET['error'])){
         switch ($_GET['error']) {
           case 0:
-
+            echo "<h2>Inicio de sesión correcto</h2>";
             break;
           case 1:
-
+            echo "<h2>Rellene usuario y contraseña</h2>";
             break;
           case 2:
-
+            echo "<h2>Contrseña no válida</h2>";
             break;
           case 3:
-            # code...
+            echo "<h2>Nombre de usuario no válido</h2>";
             break;
           case 4:
-            # code...
+            echo "<h2>Inicie sesión antes de entrar</h2>";
             break;
         }
       }
