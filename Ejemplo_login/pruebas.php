@@ -7,7 +7,7 @@
   <body>
     <?php
       require_once 'bd.php';
-      echo checkEmail("admin@iawoptima.es");
+      echo login("","");
     ?>
   </body>
 </html>

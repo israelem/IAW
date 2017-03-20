@@ -1,11 +1,11 @@
 <?php
   require_once("bd.php");
-  session_start();
   if (isset($_POST['user']) &&
       isset($_POST['password'])) {
           switch (login($_POST['user'], $_POST['password'])) {
             case 0:
               //Todo correcto
+              session_start();
               $_SESSION['user'] = $_POST['user'];
               header("location:index.php");
               break;

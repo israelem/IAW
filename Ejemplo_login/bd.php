@@ -9,7 +9,7 @@ define('NAME_DB', 'test');
 function login($user, $password){
   $db = mysqli_connect(SERVER_DB, USER_DB, PASS_DB, NAME_DB);
   $user = "'" . $user . "'";
-  $query = "SELECT * FROM usuario WHERE id = = $user";
+  $query = "SELECT * FROM usuarios WHERE id = $user";
   //$query = mysqli_real_escape_string($db, $query);
   $result = mysqli_query($db, $query);
   if ($result && mysqli_num_rows($result) == 1) {
@@ -19,11 +19,11 @@ function login($user, $password){
       $return = 0;
     }else{
       //Contraseña no válida
-      $result = -1;
+      $return = -1;
     }
   }else{
     //Usuario no válido
-    $result = -2;
+    $return = -2;
   }
   mysqli_close($db);
 

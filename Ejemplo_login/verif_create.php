@@ -21,7 +21,7 @@
         }else{
           // Error 0, el usuario se ha creado correctamente
           //header("location:create.php?error=0");
-          header("location:loghin.php");
+          header("location:login.php");
         }
   }else{
     // Error 1, falta rellenar algún campo
