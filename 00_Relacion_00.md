@@ -11,7 +11,7 @@ Crea una página PHP que muestre de forma aleatoria dos imágenes. Es decir, se 
 ## **Práctica 3.2:** Cálculo de salario
 
 Lee el nombre, los apellidos, el salario (número con decimales) y la edad de una persona (un número entero) en un formulario.
-Recoge los datos y con ellso calcula un nuevo salario para esa persona en base a esta situación:
+Recoge los datos y con ellos calcula un nuevo salario para esa persona en base a esta situación:
   - Si el salario es mayor de 2000 € no cambiará
   - Si el salario está entre 1000 y 2000 €:
     - Si además la edad es mayor de 45 años, se sube un 3%
