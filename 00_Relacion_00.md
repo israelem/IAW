@@ -21,7 +21,7 @@ Recoge los datos y con ellso calcula un nuevo salario para esa persona en base a
     - De 30 a 45 años, sube un 3%
     - A los mayores de 45 años, sube un 15%
 
-## **Práctica 3.3:** Saber si hay núnúmero
+## **Práctica 3.3:** Saber si hay número
 
 Crea un formulario que lea un número, después un mensaje nos indicará si era realmente o no un número y, si es un número, si tenía decimales.
 
