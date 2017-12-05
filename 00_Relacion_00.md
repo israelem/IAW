@@ -1,6 +1,6 @@
 # Relación 00 de PHP
 
-Relación de ejercicios resueltos del tema 3 del libro Implantación de aplicaciones web de la editorial Garceta. El material necesario lo podéis en el repositorio github del tema, además de las soluciones: [3-php-basico](https://github.com/jorgesancheznet/libro-iaw/tree/master/3-php-basico)
+Relación de ejercicios resueltos del tema 3 del libro Implantación de aplicaciones web de la editorial Garceta. El material necesario lo podéis en el repositorio github del tema de @jorgesancheznet, además de las soluciones: [3-php-basico](https://github.com/jorgesancheznet/libro-iaw/tree/master/3-php-basico)
 
 Para muchas prácticas se necestia utilizar la función ```mt_rand```, la cual recibe dos números y retorna, como resultado, un número aleatorio entre el primero y el segunda. Por ejemplo, ```mt_rand(10,20)``` devuelve un número aleatorio entre 10 y 20 (ambos incluidos).
 
