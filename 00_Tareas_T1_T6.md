@@ -29,6 +29,6 @@
 ## Tema 6 - Aplicación web
 
 - Elegir una aplicación web y:
- - Pequeña explicación sobre su uso, tecnología, historia
- - Instalación
- - Personalización de la aplicación
+  - Pequeña explicación sobre su uso, tecnología, historia
+  - Instalación
+  - Personalización de la aplicación
