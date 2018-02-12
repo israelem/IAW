@@ -1,4 +1,4 @@
-# Relación 00 de PHP
+# Relación 01 de PHP
 
 Relación de ejercicios del tema 3 del libro Implantación de aplicaciones web de la editorial Garceta. El material necesario lo podéis en el repositorio github del tema, además de las soluciones: [3-php-basico](https://github.com/jorgesancheznet/libro-iaw/tree/master/3-php-basico)
 
