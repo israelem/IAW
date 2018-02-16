@@ -1,6 +1,6 @@
 # Relación 02 de PHP
 
-Relación de ejercicios del tema 4 del libro Implantación de aplicaciones web de la editorial Garceta. El material necesario lo podéis en el repositorio github del tema, además de las soluciones: [3-php-avanzado](https://github.com/jorgesancheznet/libro-iaw/tree/master/4-php-avanzado).
+Relación de ejercicios del tema 4 del libro Implantación de aplicaciones web de la editorial Garceta. El material necesario lo podéis en el repositorio github del tema, además de las soluciones: [4-php-avanzado](https://github.com/jorgesancheznet/libro-iaw/tree/master/4-php-avanzado).
 
 ## **Práctica 4.1:** Uso de arrays con formularios
 
