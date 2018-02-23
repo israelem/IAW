@@ -29,9 +29,6 @@
 
     }
 
-
-
-
     # Cerrar sesión
     $conexion->close();
 
