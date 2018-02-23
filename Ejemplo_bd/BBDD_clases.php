@@ -26,7 +26,6 @@
                 . utf8_encode($fila["provincia"]) . "<br/>");
         }
         $resultado->free_result();
-
     }
 
     # Cerrar sesión
