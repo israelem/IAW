@@ -1,4 +1,4 @@
-# Relación 03 de PHP
+# Relación 04 de PHP
 
 Relación de ejercicios del tema 6 del libro Implantación de aplicaciones web de la editorial Garceta. El material necesario lo podéis en el repositorio github del tema, además de las soluciones: [5-php-intercambio](https://github.com/jorgesancheznet/libro-iaw/tree/master/6-php-bd).
 
