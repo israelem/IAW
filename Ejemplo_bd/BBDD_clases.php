@@ -31,5 +31,4 @@
 
     # Cerrar sesión
     $conexion->close();
-
 ?>
