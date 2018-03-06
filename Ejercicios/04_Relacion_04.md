@@ -55,7 +55,7 @@ Relación de ejercicios del tema 6 del libro Implantación de aplicaciones web d
  
 - Implementa una mejora tanto en la base de datos como en la aplicación web que nos permita detectar qué mensajes son nuevos y, por ejemplo, colorearles distintos del resto.
 
-## Práctica 6.5: Juego geogrfico
+## Práctica 6.5: Juego geográfico
 
 - Utilizando la base de datos geogrfica de la **práctica 6.1** y la **práctica 6.2**, haz un juego de conocimientos geográficos.
 
@@ -87,6 +87,6 @@ Relación de ejercicios del tema 6 del libro Implantación de aplicaciones web d
  
  - En cada artículo un enlace nos permitirá meterlo en el carrito de la compra.
  
- - En el carrtio podremos ver lo que hemos comprado, así como modificar la cantidad comprada de cada artículo o bien quitar el artículo del carrito. Incluso borrar el carrito.
+ - En el carrito podremos ver lo que hemos comprado, así como modificar la cantidad comprada de cada artículo o bien quitar el artículo del carrito. Incluso borrar el carrito.
  
  - El carrito debe mantener una semana los artículos por si el usuario cierra la sesión, que pueda seguir con el mismo carrito.
