@@ -9,7 +9,7 @@ Relación de ejercicios del tema 5 del libro Implantación de aplicaciones web d
     - Color deseado para el fondo
     - Color deseado para la letra
     - Elegir una de entre tres tipos de letra (puede ser, por ejemplo, tres tipos accesibles en la págian de [Google fonts](https://fonts.google.com/))
-- Tras aceptar los datos, una segunda página (***practica1-saludo.php***) saluda al usuari, por ejemplo, con el mensaje ***Hola Ana Fernández***, utilizando el tipo de letra y colores elegidos.
+- Tras aceptar los datos, una segunda página (***practica1-saludo.php***) saluda al usuario, por ejemplo, con el mensaje ***Hola Ana Fernández***, utilizando el tipo de letra y colores elegidos.
 - La siguiente vez que accedamos a la págian inicial (***practica1-index.php***), ya no nos preguntará las preferencias porque se dará cuenta que tiene los datos en cookies y nos llevará a la segunda página.
 - Si intentamos acceder directamente a la págian del saludo y no hemos grabado las preferencias, esta página nos llevará a la página con el formulario.
 - En la página del saludo, un enlace nos permitirá borrar las preferencias.
